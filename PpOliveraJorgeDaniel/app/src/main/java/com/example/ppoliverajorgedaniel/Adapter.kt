@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ListView
 import android.widget.TextView
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
@@ -21,13 +22,15 @@ class Adapter(val context: Context) : ListAdapter<Receta, Adapter.ViewHolder>(Di
         private val pais: TextView = view.findViewById(R.id.tv_pais)
         private val logo: ImageView = view.findViewById(R.id.iv_logo)
         private val bandera: ImageView = view.findViewById(R.id.iv_bandera)
+        //private val ingredientes: TextView = view.findViewById(R.id.tv_ingredientes)
 
         fun bind (receta: Receta) {
 
-        nombre.text = receta.nombre
+
+            nombre.text = receta.nombre
+        //ingredientes.text = receta.ingredientes
         dificultad.text = receta.dificultad.toString()
         pais.text = receta.pais.toString()
-
 
             val imagen = when (receta.pais) {
                 Origen.EGIPTO -> R.drawable.egypt

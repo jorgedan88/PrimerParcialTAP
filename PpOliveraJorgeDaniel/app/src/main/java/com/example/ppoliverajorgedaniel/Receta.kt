@@ -10,7 +10,8 @@ data class Receta (
     val dificultad:Int,
     val pais:Origen,
     val logo:String,
-
+    //val ingredientes: List <Ingredientes>
+    val ingredientes: String
 ): Parcelable
 
 enum class Origen {
@@ -22,7 +23,9 @@ enum class Origen {
     AFGANISTAN,
     IRAK
 }
-
+/*enum class Ingredientes{
+    HARINA, AZUCAR, HUEVO, PIMIENTA, SAL, CARNE_PICADA, GARBANZO
+}*/
 
 
 
